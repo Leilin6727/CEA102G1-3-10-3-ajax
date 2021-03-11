@@ -1,0 +1,560 @@
+@charset "UTF-8";
+/*******************************/
+/******** Carousel CSS *********/
+/*******************************/
+.carousel {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 170px);
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+.carousel .carousel-inner,
+.carousel .carousel-item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.filter{
+  filter: contrast(100%);
+}
+
+.carousel .carousel-item::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+}
+
+.carousel .carousel-caption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: calc(100vh - 170px);
+}
+
+.carousel .carousel-caption h1 {
+    color: #ffffff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel .carousel-caption p {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.carousel .carousel-caption .btn {
+    padding: 15px 35px;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    background: #121518;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    transition: .3s;
+}
+
+.carousel .carousel-caption .btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+@media (max-width: 767.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 40px;
+        font-weight: 700;
+    }
+
+    .carousel .carousel-caption p {
+        font-size: 20px;
+    }
+
+    .carousel .carousel-caption .btn {
+        padding: 12px 30px;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 0;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel .carousel-caption h1 {
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .carousel .carousel-caption p {
+        font-size: 16px;
+    }
+
+    .carousel .carousel-caption .btn {
+        padding: 10px 25px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 0;
+    }
+}
+
+.carousel .animated {
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+
+/*******************************/
+/*********** Movie CSS **********/
+/*******************************/
+.movie {
+    position: relative;
+    width: 100%;
+    padding: 45px 0 15px 0;
+}
+
+.movie .movie-item {
+    margin-bottom: 30px;
+}
+
+.movie .movie-img {
+    position: relative;
+}
+
+.movie .movie-img img {
+    width: 100%;
+}
+
+.movie .movie-text {
+    position: relative;
+    padding: 50px 15px 30px 15px;
+    text-align: center;
+    background: #121518;
+}
+
+.movie .movie-text h2 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #aa9166;
+}
+
+.movie .movie-text p {
+    margin: 0;
+    color: #999999;
+    margin-top: 5px;
+}
+
+.movie .movie-social {
+    position: absolute;
+    width: calc(100% - 60px);
+    height: 50px;
+    top: -25px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #aa9166;
+    font-size: 0;
+    transition: .5s;
+}
+
+.movie .movie-item:hover .movie-social {
+    width: 100%;
+    left: 0;
+}
+
+.movie .movie-social a {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 18px;
+    text-align: center;
+    color: #121518;
+    transition: .3s;
+}
+.movie .movie-social a:hover {
+    color: #ffffff;
+}
+
+.movie .owl-nav,
+.movie .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.movie .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #aa9166;
+}
+
+.movie .owl-dot.active {
+    background: #121518;
+}
+
+
+/*******************************/
+/********** About CSS **********/
+/*******************************/
+.about {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.about .section-header {
+    margin-bottom: 30px;
+}
+
+.about .about-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: #121518;
+}
+
+.about .about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .about-text p {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.about .about-text a.btn {
+    position: relative;
+    margin-top: 15px;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    background: #121518;
+    transition: .3s;
+}
+
+.about .about-text a.btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+@media (max-width: 767.98px) {
+    .about .about-img {
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+
+/*******************************/
+/*********** Notices CSS **********/
+/*******************************/
+.notices {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.notices .notices-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: #121518;
+}
+
+.notices .notices-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 767.98px) {
+    .notices .notices-img {
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+.notices .card {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border: none;
+    border-radius: 0;
+    border-top: 1px solid #aa9166;
+}
+
+.notices .card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #aa9166;
+}
+
+.notices .card-header {
+    padding: 0;
+    border: none;
+    background: #ffffff;
+}
+
+.notices .card-header a {
+    display: block;
+    width: 100%;
+    color: #121518;
+    font-size: 18px;
+    line-height: 40px;
+}
+
+.notices .card-header a span {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    text-align: center;
+    background: #121518;
+    color: #aa9166;
+    font-weight: 700;
+}
+
+.notices .card-header [data-toggle="collapse"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f067";
+    float: right;
+    color: #121518;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.notices .card-header [data-toggle="collapse"][aria-expanded="true"]:after {
+    font-family: 'font Awesome 5 Free';
+    content: "\f068";
+    float: right;
+    color: #121518;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .3s;
+}
+
+.notices .card-body {
+    padding: 15px 0 0 0;
+    font-size: 16px;
+    border: none;
+    background: #ffffff;
+}
+
+.notices a.btn {
+    position: relative;
+    margin-top: 15px;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    background: #121518;
+    transition: .3s;
+}
+
+.notices a.btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+
+/*******************************/
+/*********** Forum CSS **********/
+/*******************************/
+.forum {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.forum .forum-carousel {
+    position: relative;
+    width: calc(100% + 30px);
+    left: -15px;
+    right: -15px;
+}
+
+.forum .forum-item {
+    position: relative;
+    margin: 0 15px;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.forum .forum-page .forum-item {
+    margin: 0 0 30px 0;
+}
+
+.forum .forum-item img {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.forum .forum-item h3 {
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.forum .forum-item .meta {
+    padding: 0 0 15px 0;
+}
+
+.forum .forum-item .meta * {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #999999;
+}
+
+.forum .forum-item .meta i {
+    margin: 0 2px 0 10px;
+}
+
+.forum .forum-item .meta i:first-child {
+    margin-left: 0;
+}
+
+.forum .forum-item p {
+    font-size: 16px;
+}
+
+.forum .forum-item a.btn {
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    transition: .3s;
+}
+
+.forum .forum-item a.btn i {
+    margin-left: 10px;
+}
+
+.forum .forum-item a.btn:hover {
+    color: #121518;
+}
+
+.forum .owl-nav,
+.forum .owl-dots {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.forum .owl-dot {
+    display: inline-block;
+    margin: 0 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #aa9166;
+}
+
+.forum .owl-dot.active {
+    background: #121518;
+}
+
+.forum .pagination .page-link {
+    color: #121518;
+    border-radius: 0;
+    border-color: #aa9166;
+}
+
+.forum .pagination .page-link:hover,
+.forum .pagination .page-item.active .page-link {
+    color: #121518;
+    background: #aa9166;
+}
+
+.forum .pagination .disabled .page-link {
+    color: #999999;
+}
+
+
+/*******************************/
+/********** Book Tickets *********/
+/*******************************/
+.booktickets {
+    position: relative;
+    max-width: 900px;
+    margin: 45px auto -140px auto;
+    padding: 30px 15px;
+    background: #aa9166;
+    z-index: 1;
+}
+
+.booktickets .section-header {
+    margin-bottom: 25px;
+}
+
+.booktickets .section-header h2::before,
+.booktickets .section-header h2::after {
+    border-color: #ffffff;
+}
+
+.booktickets .form {
+    position: relative;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.booktickets .form-control{
+    margin-left: 30%;
+    width: 30%;
+    line-height: 1.5;
+    height: 58px;
+}
+
+.booktickets .btn {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    height: 40px;
+    left: 129px;
+    padding: 8px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #aa9166;
+    background: #121518;
+    border-radius: 0;
+    border: 2px solid #aa9166;
+    transition: .3s;
+}
+
+.booktickets .btn:hover {
+    color: #121518;
+    background: #aa9166;
+}

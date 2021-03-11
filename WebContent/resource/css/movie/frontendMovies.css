@@ -1,0 +1,479 @@
+@charset "UTF-8";
+/*******************************/
+/******** Movies CSS ********/
+/*******************************/
+.movies {
+    position: relative;
+    padding: 45px 0;
+    background: #ffffff;
+}
+
+.movies #movies-flters {
+    padding: 0;
+    margin: -15px 0 25px 0;
+    list-style: none;
+    font-size: 0;
+    text-align: center;
+}
+
+.movies #movies-flters li,
+.movies .load-more .btn {
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    color: #aa9166;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 0;
+    background: #121518;
+    border: 2px solid #aa9166;
+    transition: .3s;
+}
+
+.movies #movies-flters li:hover,
+.movies #movies-flters li.filter-active {
+    background: #aa9166;
+    color: #121518;
+}
+
+.movies .load-more {
+    text-align: center;
+}
+
+.movies .load-more .btn {
+    padding: 15px 35px;
+    font-size: 16px;
+    transition: .3s;
+}
+
+.movies .load-more .btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+.movies .movies-item {
+    position: relative;
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.movies .movies-item:hover {
+    margin-top: -10px;
+}
+
+.movies .movies-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.movies img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movies figure {
+    position: absolute;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .0), rgba(0, 0, 0, 1) 90%);
+}
+
+.movies figure p {
+    position: relative;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.movies figure p::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    top: 40px;
+    left: 0;
+    bottom: 0;
+    background: #ffffff;
+}
+
+.movies figure a {
+    font-family: 'EB Garamond', serif;
+    color: #aa9166;
+    font-size: 25px;
+    font-weight: 600;
+    font-style: italic;
+    transition: .3s;
+}
+
+.movies figure a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.movies figure span {
+    position: relative;
+    color: #999999;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+/*******************************/
+/******** Movies Light Box ********/
+/*******************************/
+#movies-notice{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,.8);
+    z-index: 999;
+}
+.movies-content{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    padding: 5% 2%;
+    position: fixed;
+    top: 0%;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: rgba(119,136,153,.9);
+    box-shadow: 0px 1px 5px 0px rgb(110 110 110 / 90%);
+    z-index: 99;
+}
+.close{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+}
+.close:hover,
+#lightboxbtn:hover{
+    cursor: pointer;
+}
+.movies-lightbox-inside{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.movies-content:before{
+    content: "";
+    display: block;
+    height: 30px;
+    width: 3px;
+    background-color: #bb9d52;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    transform: rotate(45deg);
+}
+.movies-content:after{
+    content: "";
+    display: block;
+    height: 30px;
+    width: 3px;
+    background-color: #bb9d52;
+    position: absolute;
+    top: 0px;
+    right: 15px;
+    transform: rotate(-45deg);
+}
+/*******************************/
+/********** Information  CSS **********/
+/*******************************/
+.movinfo {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.movinfo .section-header {
+    margin-bottom: 30px;
+}
+
+.movinfo .movinfo-vdo {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: #121518;
+}
+
+.movinfo .movinfo-vdo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movinfo .movinfo-text p {
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.movinfo .movinfo-text a.btn {
+    position: relative;
+    margin-top: 15px;
+    padding: 15px 35px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #aa9166;
+    border: 2px solid #aa9166;
+    border-radius: 0;
+    background: #121518;
+    transition: .3s;
+}
+
+.movinfo .movinfo-text a.btn:hover {
+    color: #121518;
+    background: #aa9166;
+}
+
+@media (max-width: 767.98px) {
+    .movinfo .movinfo-vdo {
+        margin-bottom: 30px;
+        height: auto;
+    }
+}
+
+
+
+/*******************************/
+/********* Reviews CSS ********/
+/*******************************/
+.reviews {
+    position: relative;
+    padding: 45px 0;
+}
+
+.reviews .reviews-start {
+    position: relative;
+    width: calc(100% + 30px);
+    left: -15px;
+    right: -15px;
+}
+
+.reviews .reviews-container {
+    padding: 0 15px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+    margin-top: -5px;
+}
+
+.reviews .reviews-container.left {
+    left: 0;
+}
+
+.reviews .reviews-container.right {
+    left: 50%;
+}
+
+.reviews .reviews-container::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: #aa9166;
+    z-index: 1;
+}
+
+.reviews .reviews-container.left::before {
+    top: 0;
+    right: 0;
+}
+
+.reviews .reviews-container.right::before {
+    bottom: 0;
+    left: 0;
+}
+
+.reviews .reviews-container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 5px;
+    background: #aa9166;
+    z-index: 1;
+}
+
+.reviews .reviews-container.left::after {
+    bottom: 0;
+    right: 0;
+}
+
+.reviews .reviews-container.right::after {
+    top: 0;
+    left: 0;
+}
+
+.reviews .reviews-container:first-child::before,
+.reviews .reviews-container:last-child::before {
+    display: none;
+}
+
+.reviews .reviews-container .reviews-content {
+    padding: 30px;
+    background: #121518;
+    position: relative;
+    border-right: 5px solid #aa9166;
+}
+
+.reviews .reviews-container.right .reviews-content {
+    border-left: 5px solid #aa9166;
+}
+
+.reviews .reviews-container .reviews-content h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+    color: #aa9166;
+}
+
+.reviews .reviews-container .reviews-content h2 span {
+    display: inline-block;
+    margin-right: 15px;
+    padding: 5px 10px;
+    color: #121518;
+    background: #aa9166;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+}
+
+.reviews .reviews-container .reviews-content p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #999999;
+}
+
+.reviews-content span{
+	font-size: 12px;
+	margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+    .reviews .reviews-container {
+        width: 100%;
+        margin-top: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 30px;
+    }
+
+    .reviews .reviews-container:last-child {
+        padding-bottom: 0;
+    }
+
+    .reviews .reviews-container.right {
+        left: 0%;
+    }
+
+    .reviews .reviews-container.left::after,
+    .reviews .reviews-container.right::after,
+    .reviews .reviews-container.left::before,
+    .reviews .reviews-container.right::before {
+        width: 5px;
+        height: 35px;
+        left: 15px;
+    }
+
+    .reviews .reviews-container.left .reviews-content,
+    .reviews .reviews-container.right .reviews-content {
+        border-left: 5px solid #aa9166;
+        border-right: none;
+    }
+}
+
+
+
+/*******************************/
+/********* Sessions CSS *********/
+/*******************************/
+.session {
+    position: relative;
+    width: 100%;
+    padding: 45px 0;
+}
+
+.session .session-item {
+    margin-bottom: 30px;
+}
+
+.session .session-icon {
+    height: 180px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(18,21,24);
+    border: 2px solid #aa9166;
+}
+
+.session .session-icon i {
+    width: 100px;
+    height: 100px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 60px;
+    color: #aa9166;
+    background: #000000;
+    transition: .5s;
+}
+
+.session .session-item:hover .session-icon i {
+    margin-right: -15px;
+}
+
+.session .session-item h3 {
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.session .session-item h3::after {
+    position: absolute;
+    content: "";
+    width: 50px;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #aa9166;
+}
+
+.session .session-item p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.session .session-img {
+    position: relative;
+    height: 100%;
+    padding: 10px;
+    background: #121518;
+}
+
+.session .session-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

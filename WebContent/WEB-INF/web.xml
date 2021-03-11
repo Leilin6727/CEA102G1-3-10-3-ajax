@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>CEA102G1</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <servlet-name>ArtServlet</servlet-name>
+    <servlet-class>com.art.controller.ArtServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtServlet</servlet-name>
+    <url-pattern>/art/art.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ArtFavServlet</servlet-name>
+    <servlet-class>com.art_fav.controller.ArtFavServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtFavServlet</servlet-name>
+    <url-pattern>/art/artFav.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ArtRepRptServlet</servlet-name>
+    <servlet-class>com.art_rep_rpt.controller.ArtRepRptServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtRepRptServlet</servlet-name>
+    <url-pattern>/art/artRepRpt.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>ArtRepServlet</servlet-name>
+    <servlet-class>com.art_rep.controller.ArtRepServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtRepServlet</servlet-name>
+    <url-pattern>/art/artRep.do</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ArtRptServlet</servlet-name>
+    <servlet-class>com.art_rpt.controller.ArtRptServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ArtRptServlet</servlet-name>
+    <url-pattern>/art/artRpt.do</url-pattern>
+  </servlet-mapping>   
+</web-app>
